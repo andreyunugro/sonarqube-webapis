@@ -1,0 +1,65 @@
+{
+  "name": "sonarqube-webapis",
+  "description": "SonarQube / SonarCloud Web APIs Client Library for Node.js",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "scripts": {
+    "clean": "shx rm -rf dist/ && shx rm -rf coverage/",
+    "ci": "ts-mocha --watch --watch-files \"src/**/*.ts,test/**/*.ts\" \"test/**/*.spec.ts\"",
+    "commit": "cz",
+    "compile": "npm run clean && tsc",
+    "lint": "eslint --ext .ts ./src ./test",
+    "mocha": "ts-mocha \"test/**/*.spec.ts\" --recursive --retries 2",
+    "release": "standard-version",
+    "test": "npm run compile && nyc npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreyunugro/sonarqube-webapis.git"
+  },
+  "keywords": [
+    "sonarqube",
+    "sonarcloud",
+    "webapis"
+  ],
+  "author": "andreyunugro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreyunugro/sonarqube-webapis/issues"
+  },
+  "homepage": "https://github.com/andreyunugro/sonarqube-webapis#readme",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.10",
+    "@types/sinon": "^10.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "chai": "^4.3.4",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-mocha": "^9.0.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "shx": "^0.3.3",
+    "sinon": "^12.0.1",
+    "source-map-support": "^0.5.21",
+    "standard-version": "^9.3.2",
+    "ts-mocha": "^8.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
