@@ -2,7 +2,8 @@
   "name": "sonarqube-webapis",
   "description": "SonarQube / SonarCloud Web APIs Client Library for Node.js",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/src/sonar.js",
+  "types": "dist/src/sonar.d.ts",
   "dependencies": {
     "axios": "^0.24.0"
   },
@@ -63,5 +64,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "files": [
+    "dist/src/*"
+  ]
 }
