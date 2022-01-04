@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import ProjectAnalyses from '../src/resources/projectanalyses';
+import ProjectAnalyses from '../../src/resources/projectanalyses';
 
 describe('Project Analyses', () => {
   const axiosInstance = axios.create();

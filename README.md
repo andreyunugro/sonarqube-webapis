@@ -11,9 +11,11 @@ I need this library to automate projects administration tasks submitted to sonar
 
 I only use several resources, but since I want to make it public, I have to, at least cover full [SonarCloud Web API](https://sonarcloud.io/web_api/).
 
+This library may not be up to date with latest spec of SonarQube / SonarCloud Web API.
+
 This library may not have the best design, but it works, only depends to [axios](https://www.npmjs.com/package/axios), easy to test so have very high test coverage.
 
-This library may not be up to date with latest spec of SonarQube / SonarCloud Web API.
+This library does not do any validation, just typechecking and pass it over to web api to validate.
 
 ## Install
 ```sh
