@@ -1,7 +1,7 @@
 {
   "name": "sonarqube-webapis",
   "description": "SonarQube / SonarCloud Web APIs Client Library for Node.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/src/sonar.js",
   "types": "dist/src/sonar.d.ts",
   "dependencies": {
