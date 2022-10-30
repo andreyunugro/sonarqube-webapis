@@ -11,7 +11,7 @@
     "clean": "shx rm -rf dist/ && shx rm -rf coverage/",
     "ci": "ts-mocha --watch --watch-files \"src/**/*.ts,test/**/*.ts\" \"test/**/*.spec.ts\"",
     "commit": "cz -S",
-    "compile": "npm run clean && tsc",
+    "compile": "npm run clean && tsc --project tsconfig.build.json",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint --ext .ts ./src ./test",
     "mocha": "ts-mocha \"test/**/*.spec.ts\" --recursive --retries 2",
