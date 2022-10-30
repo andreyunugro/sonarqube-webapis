@@ -23,32 +23,7 @@ npm install sonarqube-webapis --save
 ```
 
 ## Usage Example
-```js
-// Example 1: get all components / projects in the organization.
-import { AxiosError } from 'axios';
-import Sonar from 'sonarqube-webapis';
-
-(async () => {
-  // Initiate Sonar.
-  const sonar = new Sonar({
-    auth: {
-      username: '',
-      password: '',
-    },
-    // You can use sonarcloud / sonarqube web api url.
-    baseURL: 'https://sonarcloud.io/api',
-  });
-  try {
-    // {@link https://sonarcloud.io/web_api/api/components/search}
-    const result = await sonar.components.search('my-org2');
-    // The result is in: result.data
-    console.log('Components:', result.data.components);
-  } catch (error) {
-    // This is to show error messages from sonar.
-    console.log('Errors: ',(error as AxiosError).response?.data.errors);
-  }
-})();
-```
+See samples folder.
 
 ## License
 The project is available under the [MIT license](https://tldrlegal.com/license/mit-license).
